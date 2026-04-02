@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Users, ShieldCheck, MapPin, Utensils, Star, Wrench, Monitor, Briefcase } from "lucide-react";
+import { ArrowDown, Users, ShieldCheck, MapPin, Utensils, Star, Wrench, Monitor, Briefcase, ShoppingCart, DollarSign, Megaphone, Wallet, TrendingUp, BarChart3, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionTitle from "@/components/SectionTitle";
