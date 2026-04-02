@@ -133,10 +133,10 @@ const Index = () => {
           <SectionTitle title="Notre Stratégie Marketing" subtitle="Les 4P du Marketing Mix" />
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { icon: "🛒", title: "Produit", text: "Caravane mobile offrant des plats variés et de qualité, avec score de confiance et avis vérifiés.", glow: "primary" },
-              { icon: "💲", title: "Prix", text: "Entre 15 et 60 DH (boissons et nourriture). Fixation par calcul des coûts + marge ou alignement marché.", glow: "electric" },
-              { icon: "📣", title: "Promotion", text: "Réseaux sociaux + Bouche-à-oreille + Affiches dans écoles et universités.", glow: "electric" },
-              { icon: "📍", title: "Place", text: "Boulevards commerciaux, écoles/universités, places publiques — là où se trouvent nos clients.", glow: "primary" },
+              { icon: <ShoppingCart className="text-primary" size={28} />, title: "Produit", text: "Caravane mobile offrant des plats variés et de qualité, avec score de confiance et avis vérifiés.", glow: "primary" },
+              { icon: <DollarSign className="text-electric" size={28} />, title: "Prix", text: "Entre 15 et 60 DH (boissons et nourriture). Fixation par calcul des coûts + marge ou alignement marché.", glow: "electric" },
+              { icon: <Megaphone className="text-electric" size={28} />, title: "Promotion", text: "Réseaux sociaux + Bouche-à-oreille + Affiches dans écoles et universités.", glow: "electric" },
+              { icon: <MapPin className="text-primary" size={28} />, title: "Place", text: "Boulevards commerciaux, écoles/universités, places publiques — là où se trouvent nos clients.", glow: "primary" },
             ].map((item, i) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title} description={item.text} delay={i * 0.1} glowColor={item.glow as "primary" | "electric"} />
             ))}
