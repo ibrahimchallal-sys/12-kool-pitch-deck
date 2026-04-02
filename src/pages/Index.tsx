@@ -6,6 +6,7 @@ import {
   XCircle, Zap, Building2
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import logo12Kool from "@/assets/logo-12kool.png";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionTitle from "@/components/SectionTitle";
 import FeatureCard from "@/components/FeatureCard";
