@@ -69,19 +69,20 @@ const Index = () => {
             </a>
           </motion.div>
 
-          {/* Right — Logo placeholder */}
+          {/* Right — Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex items-center justify-center"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl border-2 border-dashed border-border bg-card/50 flex flex-col items-center justify-center gap-4 glow-box hover:border-primary/40 transition-colors">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-electric/20 flex items-center justify-center">
-                <span className="font-display text-3xl font-bold text-gradient-mixed">12K</span>
-              </div>
-              <p className="text-muted-foreground text-sm font-medium">Logo à ajouter</p>
-            </div>
+            <img
+              src={logo12Kool}
+              alt="12 Kool - Mobile Street Food"
+              width={512}
+              height={512}
+              className="w-64 md:w-80 lg:w-96 drop-shadow-[0_0_40px_hsl(24_95%_53%/0.3)]"
+            />
           </motion.div>
         </div>
       </section>
