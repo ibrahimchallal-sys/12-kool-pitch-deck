@@ -5,10 +5,11 @@ const links = [
   { href: "#probleme", label: "Problème" },
   { href: "#solution", label: "Solution" },
   { href: "#marche", label: "Marché" },
-  { href: "#strategie", label: "Stratégie" },
-  { href: "#technique", label: "Technique" },
+  { href: "#business", label: "Business" },
   { href: "#finance", label: "Finance" },
   { href: "#juridique", label: "Juridique" },
+  { href: "#risques", label: "Risques" },
+  { href: "#strategie", label: "Stratégie" },
   { href: "#equipe", label: "Équipe" },
 ];
 
@@ -33,8 +34,7 @@ const Navbar = () => {
           12 Kool
         </a>
 
-        {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5">
           {links.map((l) => (
             <a
               key={l.href}
@@ -46,7 +46,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden text-foreground"
@@ -56,7 +55,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-background/95 backdrop-blur-md border-b border-border px-6 pb-6 space-y-3">
           {links.map((l) => (
