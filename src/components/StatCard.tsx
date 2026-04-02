@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface Props {
-  icon: string;
+  icon: ReactNode;
   label: string;
   value: string;
   delay?: number;
