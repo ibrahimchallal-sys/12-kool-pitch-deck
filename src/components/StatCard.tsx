@@ -10,20 +10,22 @@ interface Props {
 }
 
 const StatCard = ({ icon, label, value, delay = 0, glowColor = "primary" }: Props) => {
-  const glowClass = glowColor === "electric" ? "glow-box-electric" : "glow-box";
   const valueColor = glowColor === "electric" ? "text-electric" : "text-primary";
+  const iconBg = glowColor === "electric" ? "bg-emerald-50" : "bg-orange-50";
 
   return (
     <motion.div
-      className={`bg-card border border-border rounded-lg p-6 text-center ${glowClass} hover:border-primary/40 transition-colors`}
+      className="bg-white border border-border rounded-2xl p-5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay }}
     >
-      <span className="text-2xl">{icon}</span>
-      <p className={`font-display text-2xl md:text-3xl font-bold ${valueColor} mt-3`}>{value}</p>
-      <p className="text-muted-foreground text-sm mt-2">{label}</p>
+      <div className={`w-10 h-10 rounded-xl ${iconBg} flex items-center justify-center mb-3`}>
+        {icon}
+      </div>
+      <p className={`font-display text-2xl md:text-3xl font-extrabold ${valueColor} leading-none`}>{value}</p>
+      <p className="text-muted-foreground text-xs mt-2 leading-snug">{label}</p>
     </motion.div>
   );
 };
