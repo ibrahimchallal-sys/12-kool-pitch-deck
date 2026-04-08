@@ -227,7 +227,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <Card className="p-8">
+          <Card className="p-8 mb-6">
             <h3 className="font-display text-lg font-bold mb-5">Avantages concurrentiels</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
@@ -241,6 +241,50 @@ const Index = () => {
                 <div key={item} className="flex items-center gap-2.5 bg-secondary/50 rounded-xl px-4 py-3">
                   <CheckCircle2 className="text-electric shrink-0" size={15} />
                   <span className="text-foreground text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="p-8">
+            <h3 className="font-display text-lg font-bold mb-5">Analyse 4P — Mix Marketing</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  label: "Produit",
+                  color: "bg-emerald-50 border-emerald-100",
+                  textColor: "text-electric",
+                  items: ["Sandwichs, wraps, burgers maison", "Ingrédients frais, recettes testées", "Menu varié : local + international"],
+                },
+                {
+                  label: "Prix",
+                  color: "bg-orange-50 border-orange-100",
+                  textColor: "text-primary",
+                  items: ["15 à 60 DH — accessible à tous", "Rapport qualité/prix supérieur", "Promotions & fidélité via l'app"],
+                },
+                {
+                  label: "Place",
+                  color: "bg-blue-50 border-blue-100",
+                  textColor: "text-blue-500",
+                  items: ["Food truck mobile — zones à fort trafic", "Universités, bureaux, événements", "Précommande & livraison locale"],
+                },
+                {
+                  label: "Promotion",
+                  color: "bg-purple-50 border-purple-100",
+                  textColor: "text-purple-500",
+                  items: ["TikTok, Instagram, WhatsApp", "Contenu vidéo de préparation", "Bouche-à-oreille & avis vérifiés"],
+                },
+              ].map((p) => (
+                <div key={p.label} className={`rounded-xl border p-5 ${p.color}`}>
+                  <p className={`font-display font-bold text-base mb-3 ${p.textColor}`}>{p.label}</p>
+                  <ul className="space-y-2">
+                    {p.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-foreground/70">
+                        <span className={`mt-1 shrink-0 ${p.textColor}`}>●</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -484,42 +528,7 @@ const Index = () => {
 
       <Wave fill="hsl(220,12%,93%)" />
 
-      {/* ══════════════════════════════════════════
-          ÉQUIPE
-      ══════════════════════════════════════════ */}
-      <AnimatedSection id="equipe" className="bg-secondary/40" blob="both">
-        <div className="container mx-auto px-4 md:px-8 lg:px-12">
-          <SectionTitle badge="Les personnes" title="Notre Équipe" centered />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {[
-              { first: "Abdel Monim", last: "Mazgoura", role: "Dev Full Stack" },
-              { first: "Ilyas", last: "Wakrim", role: "Dev Full Stack" },
-              { first: "Jad", last: "Ghallali", role: "Dev Full Stack" },
-              { first: "Ibrahim", last: "Challal", role: "Dev Full Stack" },
-              { first: "Zakaria", last: "Belcadi", role: "Dev Full Stack" },
-            ].map((member, i) => (
-              <motion.div key={member.last}
-                className="bg-white border border-border rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all"
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-emerald-100 font-display font-extrabold text-xl flex items-center justify-center mx-auto mb-3 text-primary">
-                  {member.first[0]}
-                </div>
-                <p className="font-display font-bold text-sm text-foreground">{member.first}</p>
-                <p className="text-muted-foreground text-xs">{member.last}</p>
-                <span className="mt-2 inline-block text-[10px] bg-secondary border border-border px-2 py-0.5 rounded-full text-muted-foreground">{member.role}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
-
-      <Wave fill="hsl(0,0%,98%)" />
-
-      {/* ══════════════════════════════════════════
-          CONCLUSION
-      ══════════════════════════════════════════ */}
-      <AnimatedSection id="conclusion" blob="both">
+       <AnimatedSection id="conclusion" blob="both">
         <div className="container mx-auto px-4 md:px-8 lg:px-12 text-center">
           <SectionTitle badge="En résumé" title="Conclusion" centered />
           <Card className="p-10 md:p-14 max-w-3xl mx-auto">
@@ -543,6 +552,43 @@ const Index = () => {
           </Card>
         </div>
       </AnimatedSection>
+
+      {/* ══════════════════════════════════════════
+          ÉQUIPE
+      ══════════════════════════════════════════ */}
+      <AnimatedSection id="equipe" className="bg-secondary/40" blob="both">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12">
+          <SectionTitle badge="Les personnes" title="Notre Équipe" centered />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { first: "Abdel Monim", last: "Mazgoura", role: "Dev Full Stack" },
+              { first: "Ilyas", last: "Wakrim", role: "Dev Full Stack" },
+              { first: "Jad", last: "Ghallali", role: "Dev Full Stack" },
+              { first: "Ibrahim", last: "Challal", role: "Dev Full Stack" },
+              { first: "ZAKARIA", last: "BELCADI", role: "Dev Full Stack" },
+            ].map((member, i) => (
+              <motion.div key={member.last}
+                className="bg-white border border-border rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all"
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+              >
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-emerald-100 font-display font-extrabold text-xl flex items-center justify-center mx-auto mb-3 text-primary">
+                  {member.first[0]}
+                </div>
+                <p className="font-display font-bold text-sm text-foreground">{member.first}</p>
+                <p className="text-muted-foreground text-xs">{member.last}</p>
+                <span className="mt-2 inline-block text-[10px] bg-secondary border border-border px-2 py-0.5 rounded-full text-muted-foreground">{member.role}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <Wave fill="hsl(0,0%,98%)" />
+
+      {/* ══════════════════════════════════════════
+          CONCLUSION
+      ══════════════════════════════════════════ */}
+     
 
       {/* ══════════════════════════════════════════
           FOOTER
