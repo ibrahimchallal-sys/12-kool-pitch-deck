@@ -532,11 +532,8 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-8 lg:px-12 text-center">
           <SectionTitle badge="En résumé" title="Conclusion" centered />
           <Card className="p-10 md:p-14 max-w-3xl mx-auto">
-            <p className="text-foreground/90 text-lg leading-relaxed mb-4">
+            <p className="text-foreground/90 text-lg leading-relaxed mb-8">
               <strong>12 Kool</strong> représente une <span className="text-primary font-semibold">opportunité de marché unique</span> au Maroc : combiner restauration mobile de qualité et innovation digitale. Notre approche différenciante — précommande en ligne, géolocalisation et transparence — positionne le projet comme un acteur moderne de la restauration rapide.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Avec un investissement initial de 208K DH et un retour sur investissement prévu à 18 mois, le modèle économique est solide. Le test pilote de 3 mois permettra de valider les hypothèses et d'optimiser l'opération avant déploiement. La demande pour une restauration rapide fiable et digitale est réelle — 12 Kool est prêt à y répondre.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
