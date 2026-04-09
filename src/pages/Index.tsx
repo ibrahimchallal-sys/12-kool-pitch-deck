@@ -77,7 +77,7 @@ const Index = () => {
               {[
                 { value: "15–60", unit: "DH", label: "Prix par repas" },
                 { value: "18", unit: "mois", label: "Retour invest." },
-                { value: "5", unit: "assoc.", label: "Équipe tech" },
+                { value: "4", unit: "assoc.", label: "Équipe tech" },
               ].map((s) => (
                 <div key={s.label} className="bg-white/80 backdrop-blur border border-border rounded-xl p-4 shadow-sm">
                   <p className="font-display font-extrabold text-2xl text-foreground leading-none">
@@ -105,7 +105,7 @@ const Index = () => {
                   Développement Digital Full Stack
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["A. Mazgoura", "I. Wakrim", "J. Ghallali", "I. Challal", "Z. Belcadi"].map((name) => (
+                  {["A. Mazgoura", "I. Wakrim", "J. Ghallali", "I. Challal"].map((name) => (
                     <span key={name} className="text-xs text-muted-foreground bg-secondary border border-border px-3 py-1 rounded-full">{name}</span>
                   ))}
                 </div>
@@ -559,13 +559,12 @@ const Index = () => {
       <AnimatedSection id="equipe" className="bg-secondary/40" blob="both">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
           <SectionTitle badge="Les personnes" title="Notre Équipe" centered />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
               { first: "Abdel Monim", last: "Mazgoura", role: "Dev Full Stack" },
               { first: "Ilyas", last: "Wakrim", role: "Dev Full Stack" },
               { first: "Jad", last: "Ghallali", role: "Dev Full Stack" },
               { first: "Ibrahim", last: "Challal", role: "Dev Full Stack" },
-              { first: "ZAKARIA", last: "BELCADI", role: "Dev Full Stack" },
             ].map((member, i) => (
               <motion.div key={member.last}
                 className="bg-white border border-border rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all"
