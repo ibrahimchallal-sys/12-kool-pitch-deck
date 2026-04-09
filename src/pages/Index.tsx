@@ -357,10 +357,10 @@ const Index = () => {
           <SectionTitle badge="Chiffres" title="Plan Financier" subtitle="Projections réalistes et analyse des risques." />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <StatCard icon={<Wallet className="text-primary" size={20} />} label="Investissement initial" value="130–200K DH" delay={0} glowColor="primary" />
-            <StatCard icon={<TrendingUp className="text-electric" size={20} />} label="CA mensuel estimé" value="~36 400 DH" delay={0.1} glowColor="electric" />
+            <StatCard icon={<Wallet className="text-primary" size={20} />} label="Investissement initial" value="208K DH" delay={0} glowColor="primary" />
+            <StatCard icon={<TrendingUp className="text-electric" size={20} />} label="CA mensuel estimé" value="30–38K DH" delay={0.1} glowColor="electric" />
             <StatCard icon={<BarChart3 className="text-primary" size={20} />} label="Bénéfice mensuel" value="10–12K DH" delay={0.2} glowColor="primary" />
-            <StatCard icon={<Clock className="text-electric" size={20} />} label="Retour sur invest." value="18–24 mois" delay={0.3} glowColor="electric" />
+            <StatCard icon={<Clock className="text-electric" size={20} />} label="Retour sur invest." value="18 mois" delay={0.3} glowColor="electric" />
           </div>
 
           <Card className="p-6 mb-6">
@@ -371,7 +371,7 @@ const Index = () => {
             <Card className="p-6 space-y-4">
               <h4 className="font-display font-bold text-base">Structure du financement</h4>
               {[
-                { source: "Apport personnel", montant: "80 000 DH", pct: 40, color: "bg-primary" },
+                { source: "Apport personnel", montant: "88 000 DH", pct: 40, color: "bg-primary" },
                 { source: "Crédit bancaire", montant: "100 000 DH", pct: 50, color: "bg-electric" },
                 { source: "Aide familiale", montant: "20 000 DH", pct: 10, color: "bg-muted-foreground/40" },
               ].map((f, i) => (
@@ -533,16 +533,16 @@ const Index = () => {
           <SectionTitle badge="En résumé" title="Conclusion" centered />
           <Card className="p-10 md:p-14 max-w-3xl mx-auto">
             <p className="text-foreground/90 text-lg leading-relaxed mb-4">
-              <strong>12 Kool</strong> est un projet <span className="text-primary font-semibold">réalisable mais risqué</span>. Le concept répond à un vrai besoin — mais la réussite dépend de l'exécution : emplacement, qualité constante, et gestion rigoureuse des coûts.
+              <strong>12 Kool</strong> représente une <span className="text-primary font-semibold">opportunité de marché unique</span> au Maroc : combiner restauration mobile de qualité et innovation digitale. Notre approche différenciante — précommande en ligne, géolocalisation et transparence — positionne le projet comme un acteur moderne de la restauration rapide.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Le potentiel de rentabilité existe (10–12K DH/mois après stabilisation), mais les premiers mois seront critiques. Un test pilote de 3 mois est indispensable avant tout investissement lourd.
+              Avec un investissement initial de 208K DH et un retour sur investissement prévu à 18 mois, le modèle économique est solide. Le test pilote de 3 mois permettra de valider les hypothèses et d'optimiser l'opération avant déploiement. La demande pour une restauration rapide fiable et digitale est réelle — 12 Kool est prêt à y répondre.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { label: "Projet réalisable", color: "bg-orange-50 border-orange-200 text-primary" },
-                { label: "Risque maîtrisable", color: "bg-emerald-50 border-emerald-200 text-electric" },
-                { label: "Exécution décisive", color: "bg-secondary border-border text-foreground" },
+                { label: "Modèle économique solide", color: "bg-orange-50 border-orange-200 text-primary" },
+                { label: "Marché porteur", color: "bg-emerald-50 border-emerald-200 text-electric" },
+                { label: "Innovation digitale", color: "bg-secondary border-border text-foreground" },
               ].map((tag) => (
                 <span key={tag.label} className={`text-sm font-display font-bold border px-5 py-2.5 rounded-xl ${tag.color}`}>
                   {tag.label}

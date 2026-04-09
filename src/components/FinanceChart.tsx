@@ -2,19 +2,19 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis
 
 const charges = [
   { name: "Matières premières", value: 14560, color: "#f97316" },
-  { name: "Salaires", value: 5000, color: "#22d3a5" },
+  { name: "Salaires (CNSS incluse)", value: 3500, color: "#22d3a5" },
   { name: "Assurance & entretien", value: 2000, color: "#fb923c" },
   { name: "Transport & gaz", value: 1500, color: "#6ee7d0" },
   { name: "Autres charges", value: 1340, color: "#94a3b8" },
 ];
 
 const projection = [
-  { mois: "M1", ca: 18000, charges: 25400 },
-  { mois: "M2", ca: 24000, charges: 25400 },
-  { mois: "M3", ca: 29000, charges: 25400 },
-  { mois: "M4", ca: 33000, charges: 25400 },
-  { mois: "M5", ca: 36400, charges: 25400 },
-  { mois: "M6", ca: 38000, charges: 25400 },
+  { mois: "M1", ca: 18000, charges: 22900 },
+  { mois: "M2", ca: 24000, charges: 22900 },
+  { mois: "M3", ca: 29000, charges: 22900 },
+  { mois: "M4", ca: 33000, charges: 22900 },
+  { mois: "M5", ca: 36000, charges: 22900 },
+  { mois: "M6", ca: 38000, charges: 22900 },
 ];
 
 const CustomTooltip = ({ active, payload, label }: any) => {
